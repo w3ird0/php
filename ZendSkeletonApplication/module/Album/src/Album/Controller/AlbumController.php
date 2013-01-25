@@ -40,7 +40,7 @@ class AlbumController extends AbstractActionController
         return array('form' => $form);
     }
 
-								
+
     public function editAction()
     {
         $id = (int) $this->params()->fromRoute('id', 0);
