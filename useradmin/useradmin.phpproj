@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>useradmin</Name>
+    <ProjectGuid>{05a69118-5836-476c-b393-3409a1d26efd}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>useradmin</RootNamespace>
+    <!-- important to be opened by PHP Tools, when also Phalanger Tools are installed -->
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>useradmin</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="classes\appform.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\auth.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\auth\orm.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\controller\admin\user.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\controller\app.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\controller\user.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\helper\datatable.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\helper\format.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\message.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\model\user.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\model\user\identity.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\provider.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\provider\facebook.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\provider\oauth.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\provider\openid.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\provider\twitter.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\appform.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\auth.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\auth\orm.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\controller\admin\user.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\controller\app.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\controller\user.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\driver\iauth.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\helper\datatable.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\helper\format.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\message.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\model\user.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\model\user\identity.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\provider.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\provider\facebook.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\provider\oauth.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\provider\openid.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classes\useradmin\provider\twitter.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="config\facebook.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="config\oauth.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="config\recaptcha.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="config\useradmin.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="init.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="messages\login.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="messages\register\user.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\usertests.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\facebook\src\base_facebook.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\facebook\src\facebook.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\lightopenid\openid.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\recaptcha\example-captcha.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\recaptcha\example-mailhide.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\recaptcha\recaptchalib.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\pagination\useradmin.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\template\default.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\template\useradmin.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\user\admin\delete.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\user\admin\edit.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\user\admin\index.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\user\associate.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\user\login.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\user\noaccess.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\user\profile.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\user\profile_edit.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\user\register.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\user\reset\forgot.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\user\reset\reset.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\user\unregister.php">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="classes\" />
+    <Folder Include="classes\auth\" />
+    <Folder Include="classes\controller\" />
+    <Folder Include="classes\controller\admin\" />
+    <Folder Include="classes\helper\" />
+    <Folder Include="classes\model\" />
+    <Folder Include="classes\model\user\" />
+    <Folder Include="classes\provider\" />
+    <Folder Include="classes\useradmin\" />
+    <Folder Include="classes\useradmin\auth\" />
+    <Folder Include="classes\useradmin\controller\" />
+    <Folder Include="classes\useradmin\controller\admin\" />
+    <Folder Include="classes\useradmin\driver\" />
+    <Folder Include="classes\useradmin\helper\" />
+    <Folder Include="classes\useradmin\model\" />
+    <Folder Include="classes\useradmin\model\user\" />
+    <Folder Include="classes\useradmin\provider\" />
+    <Folder Include="config\" />
+    <Folder Include="database\" />
+    <Folder Include="docs\" />
+    <Folder Include="messages\" />
+    <Folder Include="messages\register\" />
+    <Folder Include="public\" />
+    <Folder Include="public\css\" />
+    <Folder Include="public\img\" />
+    <Folder Include="public\img\small\" />
+    <Folder Include="public\img\tiny\" />
+    <Folder Include="tests\" />
+    <Folder Include="tests\data\" />
+    <Folder Include="vendor\" />
+    <Folder Include="vendor\facebook\" />
+    <Folder Include="vendor\facebook\src\" />
+    <Folder Include="vendor\lightopenid\" />
+    <Folder Include="vendor\recaptcha\" />
+    <Folder Include="views\" />
+    <Folder Include="views\pagination\" />
+    <Folder Include="views\template\" />
+    <Folder Include="views\user\" />
+    <Folder Include="views\user\admin\" />
+    <Folder Include="views\user\reset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database\useradmin.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="docs\Useradmin_Auth.dia">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="docs\Useradmin_Auth.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\css\style.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\boxbar-background.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\button-background.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\facebook.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\fb-login.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\google.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\linkedin.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\menubar-background.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\small\facebook.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\small\facebook_gray.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\small\google.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\small\google_gray.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\small\twitter.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\small\twitter_gray.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\small\yahoo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\small\yahoo_gray.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\tiny\facebook.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\tiny\google.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\tiny\twitter.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\tiny\yahoo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\twitter.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="public\img\yahoo.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="readme.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="schema.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="tests\data\clean-setup.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="useradmin-screen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="vendor\facebook\src\fb_ca_chain_bundle.crt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="vendor\recaptcha\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="vendor\recaptcha\README">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>
